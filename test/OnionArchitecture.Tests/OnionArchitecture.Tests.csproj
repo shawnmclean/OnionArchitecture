@@ -81,7 +81,7 @@
       <Project>{32af6ccb-db62-4fc1-876f-3b2727e15e8e}</Project>
       <Name>OnionArchitecture.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\OnionArchitecture.Service\OnionArchitecture.Core.Service.csproj">
+    <ProjectReference Include="..\..\src\OnionArchitecture.Core.Service\OnionArchitecture.Core.Service.csproj">
       <Project>{88197713-b76c-4f67-a4b7-27e5e2dbb60f}</Project>
       <Name>OnionArchitecture.Core.Service</Name>
     </ProjectReference>

@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Core.Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Core.Repository", "src\OnionArchitecture.Core.Repository\OnionArchitecture.Core.Repository.csproj", "{6199C9AB-B521-4957-A7D6-C5EDF6393738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Core.Service", "src\OnionArchitecture.Service\OnionArchitecture.Core.Service.csproj", "{88197713-B76C-4F67-A4B7-27E5E2DBB60F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Core.Service", "src\OnionArchitecture.Core.Service\OnionArchitecture.Core.Service.csproj", "{88197713-B76C-4F67-A4B7-27E5E2DBB60F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastructure", "src\OnionArchitecture.Infrastructure\OnionArchitecture.Infrastructure.csproj", "{32AF6CCB-DB62-4FC1-876F-3B2727E15E8E}"
 EndProject
