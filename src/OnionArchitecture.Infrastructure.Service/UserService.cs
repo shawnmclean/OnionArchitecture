@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OnionArchitecture.Common;
+using OnionArchitecture.Core.Domain;
 using OnionArchitecture.Core.Repository;
-using OnionArchitecture.Service;
+using OnionArchitecture.Core.Service;
 
 namespace OnionArchitecture.Infrastructure.Service
 {
