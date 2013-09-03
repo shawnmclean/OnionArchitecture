@@ -42,6 +42,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{94777B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{3F8E6BAA-4390-419C-B5F8-B078AEB8C402}"
 	ProjectSection(SolutionItems) = preProject
+		scripts\GitBuild.xaml = scripts\GitBuild.xaml
 		scripts\UpdateVersion.ps1 = scripts\UpdateVersion.ps1
 	EndProjectSection
 EndProject
