@@ -24,7 +24,9 @@ namespace OnionArchitecture.Infrastructure.Service
 
         public void CreateUser(User user)
         {
-            throw new NotImplementedException();
+            user.DateCreated = DateTime.Now;
+            userRepository.Create(user);
+            unitOfWork.SaveChanges();
         }
 
         public User GetUser(int userId)
