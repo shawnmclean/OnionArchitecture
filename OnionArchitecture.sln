@@ -27,9 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Common", "src\OnionArchitecture.Common\OnionArchitecture.Common.csproj", "{9FBED480-68EF-47CA-B11D-D56CF874F18D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Tests", "test\OnionArchitecture.Tests\OnionArchitecture.Tests.csproj", "{AC2F0F63-7504-485A-8A37-82D9FBCCA8B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.UnitTests", "test\OnionArchitecture.Tests\OnionArchitecture.UnitTests.csproj", "{AC2F0F63-7504-485A-8A37-82D9FBCCA8B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastructure.Service", "src\OnionArchitecture.Infrastructure.Service\OnionArchitecture.Infrastructure.Service.csproj", "{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Web.Mvc", "src\OnionArchitecture.Web.Mvc\OnionArchitecture.Web.Mvc.csproj", "{133C99CE-1E17-4AE6-84C8-CCB77F326E8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{133C99CE-1E17-4AE6-84C8-CCB77F326E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{133C99CE-1E17-4AE6-84C8-CCB77F326E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{133C99CE-1E17-4AE6-84C8-CCB77F326E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{133C99CE-1E17-4AE6-84C8-CCB77F326E8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,5 +92,6 @@ Global
 		{8E0DFF0C-65A3-4E8F-B1CB-E79D6EF14F7A} = {9D8057E0-37B6-453D-9DC9-A7F3A11C01CD}
 		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41} = {9D8057E0-37B6-453D-9DC9-A7F3A11C01CD}
 		{9FBED480-68EF-47CA-B11D-D56CF874F18D} = {B3ADAB4D-2649-48B3-BC89-E6DB86E5B21C}
+		{133C99CE-1E17-4AE6-84C8-CCB77F326E8F} = {B50F0BDF-90FE-42D4-9BCA-AE85585841F6}
 	EndGlobalSection
 EndGlobal
