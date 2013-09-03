@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Core.Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Core.Repository", "src\OnionArchitecture.Core.Repository\OnionArchitecture.Core.Repository.csproj", "{6199C9AB-B521-4957-A7D6-C5EDF6393738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Service", "src\OnionArchitecture.Service\OnionArchitecture.Service.csproj", "{88197713-B76C-4F67-A4B7-27E5E2DBB60F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Core.Service", "src\OnionArchitecture.Service\OnionArchitecture.Core.Service.csproj", "{88197713-B76C-4F67-A4B7-27E5E2DBB60F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastructure", "src\OnionArchitecture.Infrastructure\OnionArchitecture.Infrastructure.csproj", "{32AF6CCB-DB62-4FC1-876F-3B2727E15E8E}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Common", "src\OnionArchitecture.Common\OnionArchitecture.Common.csproj", "{9FBED480-68EF-47CA-B11D-D56CF874F18D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Tests", "test\OnionArchitecture.Tests\OnionArchitecture.Tests.csproj", "{AC2F0F63-7504-485A-8A37-82D9FBCCA8B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastructure.Service", "src\OnionArchitecture.Infrastructure.Service\OnionArchitecture.Infrastructure.Service.csproj", "{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{AC2F0F63-7504-485A-8A37-82D9FBCCA8B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC2F0F63-7504-485A-8A37-82D9FBCCA8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC2F0F63-7504-485A-8A37-82D9FBCCA8B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{88197713-B76C-4F67-A4B7-27E5E2DBB60F} = {F01BDA75-2B13-4EBC-8949-30C2F1D90F12}
 		{32AF6CCB-DB62-4FC1-876F-3B2727E15E8E} = {9D8057E0-37B6-453D-9DC9-A7F3A11C01CD}
 		{8E0DFF0C-65A3-4E8F-B1CB-E79D6EF14F7A} = {9D8057E0-37B6-453D-9DC9-A7F3A11C01CD}
+		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41} = {9D8057E0-37B6-453D-9DC9-A7F3A11C01CD}
 		{9FBED480-68EF-47CA-B11D-D56CF874F18D} = {B3ADAB4D-2649-48B3-BC89-E6DB86E5B21C}
 	EndGlobalSection
 EndGlobal

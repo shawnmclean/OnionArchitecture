@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{32AF6CCB-DB62-4FC1-876F-3B2727E15E8E}</ProjectGuid>
+    <ProjectGuid>{EB38F4D1-7127-4320-B5CE-BF4112DB4B41}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OnionArchitecture.Infrastructure</RootNamespace>
-    <AssemblyName>OnionArchitecture.Infrastructure</AssemblyName>
+    <RootNamespace>OnionArchitecture.Infrastructure.Service</RootNamespace>
+    <AssemblyName>OnionArchitecture.Infrastructure.Service</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,10 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Aspects\" />
-    <Folder Include="Commands\" />
+    <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OnionArchitecture.Common\OnionArchitecture.Common.csproj">
@@ -57,6 +54,10 @@
     <ProjectReference Include="..\OnionArchitecture.Core.Repository\OnionArchitecture.Core.Repository.csproj">
       <Project>{6199c9ab-b521-4957-a7d6-c5edf6393738}</Project>
       <Name>OnionArchitecture.Core.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnionArchitecture.Service\OnionArchitecture.Core.Service.csproj">
+      <Project>{88197713-b76c-4f67-a4b7-27e5e2dbb60f}</Project>
+      <Name>OnionArchitecture.Core.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

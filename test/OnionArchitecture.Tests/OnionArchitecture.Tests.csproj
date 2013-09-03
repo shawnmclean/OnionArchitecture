@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\..\packages\Moq.4.1.1308.2321\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -50,10 +53,41 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Core\Service\UserServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\Service\" />
+    <ProjectReference Include="..\..\src\OnionArchitecture.Common\OnionArchitecture.Common.csproj">
+      <Project>{9fbed480-68ef-47ca-b11d-d56cf874f18d}</Project>
+      <Name>OnionArchitecture.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\OnionArchitecture.Core.Domain\OnionArchitecture.Core.Domain.csproj">
+      <Project>{c0574d44-7027-45b7-b80e-bb04ae93466e}</Project>
+      <Name>OnionArchitecture.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\OnionArchitecture.Core.Repository\OnionArchitecture.Core.Repository.csproj">
+      <Project>{6199c9ab-b521-4957-a7d6-c5edf6393738}</Project>
+      <Name>OnionArchitecture.Core.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\OnionArchitecture.Infrastructure.Repository\OnionArchitecture.Infrastructure.Repository.csproj">
+      <Project>{8e0dff0c-65a3-4e8f-b1cb-e79d6ef14f7a}</Project>
+      <Name>OnionArchitecture.Infrastructure.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\OnionArchitecture.Infrastructure.Service\OnionArchitecture.Infrastructure.Service.csproj">
+      <Project>{eb38f4d1-7127-4320-b5ce-bf4112db4b41}</Project>
+      <Name>OnionArchitecture.Infrastructure.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\OnionArchitecture.Infrastructure\OnionArchitecture.Infrastructure.csproj">
+      <Project>{32af6ccb-db62-4fc1-876f-3b2727e15e8e}</Project>
+      <Name>OnionArchitecture.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\OnionArchitecture.Service\OnionArchitecture.Core.Service.csproj">
+      <Project>{88197713-b76c-4f67-a4b7-27e5e2dbb60f}</Project>
+      <Name>OnionArchitecture.Core.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
