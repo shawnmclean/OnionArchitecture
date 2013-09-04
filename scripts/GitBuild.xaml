@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sads sap sap2010" x:Class="TfsBuild.Process" this:Process.AutomatedTests="[{ New Microsoft.TeamFoundation.Build.Common.BuildParameter(&quot; { &quot;&quot;AssemblyFileSpec&quot;&quot;: &quot;&quot;**\\*test*.dll;**\\*test*.appx&quot;&quot;, &quot;&quot;RunSettingsFileName&quot;&quot;: null, &quot;&quot;TestCaseFilter&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;RunSettingsForTestRun&quot;&quot;: { &quot;&quot;ServerRunSettingsFile&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;TypeRunSettings&quot;&quot;: &quot;&quot;Default&quot;&quot;, &quot;&quot;HasRunSettingsFile&quot;&quot;: false }, &quot;&quot;HasRunSettingsFile&quot;&quot;: false, &quot;&quot;HasTestCaseFilter&quot;&quot;: false, &quot;&quot;ExecutionPlatform&quot;&quot;: &quot;&quot;X86&quot;&quot;, &quot;&quot;FailBuildOnFailure&quot;&quot;: false, &quot;&quot;RunName&quot;&quot;: &quot;&quot;&quot;&quot; } &quot;) }]" this:Process.AdvancedTestSettings="[New Microsoft.TeamFoundation.Build.Common.BuildParameter(&quot; { &quot;&quot;DisableTests&quot;&quot;: false, &quot;&quot;PreActionScriptPath&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;PreActionScriptArguments&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;PostActionScriptPath&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;PostActionScriptArguments&quot;&quot;: &quot;&quot;&quot;&quot; } &quot;)]" this:Process.BuildNumberFormat="[&quot;$(BuildDefinitionName)_$(Date:yyyyMMdd)$(Rev:.r)&quot;]" this:Process.CleanRepository="[True]" this:Process.AdvancedBuildSettings="[New Microsoft.TeamFoundation.Build.Common.BuildParameter(&quot; { &quot;&quot;MSBuildArguments&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;MSBuildPlatform&quot;&quot;: &quot;&quot;Auto&quot;&quot;, &quot;&quot;PreActionScriptPath&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;PreActionScriptArguments&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;PostActionScriptPath&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;PostActionScriptArguments&quot;&quot;: &quot;&quot;&quot;&quot;, &quot;&quot;RunCodeAnalysis&quot;&quot;: &quot;&quot;AsConfigured&quot;&quot; } &quot;)]" this:Process.AgentSettings="[New Microsoft.TeamFoundation.Build.Common.BuildParameter(&quot; { &quot;&quot;MaxExecutionTime&quot;&quot;: &quot;&quot;00:00:00&quot;&quot;, &quot;&quot;MaxWaitTime&quot;&quot;: &quot;&quot;04:00:00&quot;&quot;, &quot;&quot;Name&quot;&quot;: &quot;&quot;*&quot;&quot;, &quot;&quot;Tags&quot;&quot;: [], &quot;&quot;TagComparison&quot;&quot;: &quot;&quot;MatchExactly&quot;&quot; } &quot;)]" this:Process.CleanBuild="[True]" this:Process.OutputLocation="[&quot;SingleFolder&quot;]" this:Process.CreateWorkItem="[True]" this:Process.UpdateAssociatedWorkItems="[True]" this:Process.SupportedReasons="Manual, IndividualCI, BatchedCI, Schedule, ScheduleForced, UserCreated" this:Process.BuildProcessVersion="12.0"
+﻿<Activity mc:Ignorable="sads sap sap2010" x:Class="TfsBuild.Process" this:Process.AgentSettings="[New Microsoft.TeamFoundation.Build.Common.BuildParameter(&quot; { &quot;&quot;MaxExecutionTime&quot;&quot;: &quot;&quot;00:00:00&quot;&quot;, &quot;&quot;MaxWaitTime&quot;&quot;: &quot;&quot;04:00:00&quot;&quot;, &quot;&quot;Name&quot;&quot;: &quot;&quot;*&quot;&quot;, &quot;&quot;Tags&quot;&quot;: [], &quot;&quot;TagComparison&quot;&quot;: &quot;&quot;MatchExactly&quot;&quot; } &quot;)]" this:Process.CreateWorkItem="[True]" this:Process.UpdateAssociatedWorkItems="[True]" this:Process.SupportedReasons="Manual, IndividualCI, BatchedCI, Schedule, ScheduleForced, UserCreated" this:Process.BuildProcessVersion="12.0"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mt="clr-namespace:Microsoft.TeamFoundation;assembly=Microsoft.TeamFoundation.Common"
@@ -27,15 +27,7 @@
   <x:Members>
     <x:Property Name="ProjectsToBuild" Type="InArgument(s:String[])" />
     <x:Property Name="ConfigurationsToBuild" Type="InArgument(s:String[])" />
-    <x:Property Name="AutomatedTests" Type="InArgument(mtbc:BuildParameter[])" />
-    <x:Property Name="AdvancedTestSettings" Type="InArgument(mtbc:BuildParameter)" />
-    <x:Property Name="BuildNumberFormat" Type="InArgument(x:String)" />
-    <x:Property Name="CleanRepository" Type="InArgument(x:Boolean)" />
-    <x:Property Name="AdvancedBuildSettings" Type="InArgument(mtbc:BuildParameter)" />
     <x:Property Name="AgentSettings" Type="InArgument(mtbc:BuildParameter)" />
-    <x:Property Name="CleanBuild" Type="InArgument(x:Boolean)" />
-    <x:Property Name="CheckoutOverride" Type="InArgument(x:String)" />
-    <x:Property Name="OutputLocation" Type="InArgument(x:String)" />
     <x:Property Name="SymbolStorePath" Type="InArgument(x:String)" />
     <x:Property Name="CreateWorkItem" Type="InArgument(x:Boolean)" />
     <x:Property Name="UpdateAssociatedWorkItems" Type="InArgument(x:Boolean)" />
@@ -50,9 +42,6 @@
   <this:Process.ConfigurationsToBuild>
     <InArgument x:TypeArguments="s:String[]" />
   </this:Process.ConfigurationsToBuild>
-  <this:Process.CheckoutOverride>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Process.CheckoutOverride>
   <this:Process.SymbolStorePath>
     <InArgument x:TypeArguments="x:String" />
   </this:Process.SymbolStorePath>
@@ -145,7 +134,7 @@
         </TryCatch.Finally>
       </TryCatch>
     </mtbwa:AgentScope>
-    <sads:DebugSymbol.Symbol>d0hEOlxQcm9qZWN0c1xNQ1N5c3RlbXNcVEZTLU9ubGluZVxPbmlvbkFyY2hpdGVjdHVyZVxzY3JpcHRzXEdpdEJ1aWxkLnhhbWw9bQOVAQ4CAQFuBW6yAQIBV28FkwEYAgECbkVuWgIBWG/wAW/MAgIBB2+CAW/jAQIBBW/dAm+LAwIBA3AHcMUBAgFTcQdxvAECAU1yB3LhAQIBSXMHkgESAgEJcKUBcKoBAgFWcDNwOAIBVXC9AXDCAQIBVHEmcTkCAVFxQXFVAgFPcYcBcY0BAgFOcsEBct4BAgFLcnVyewIBSnULfRYCARONAQuQARYCAQ+FAQ+IARoCAQp2DXaZAgIBQ3cNd8MFAgExeA144AICASt5DXnhAgIBJXoNeqcCAgEeew174gICARh8DXyuAQIBFI4BDY4BcQIBEYYBEYYBtQECAQyHARGHAYMBAgELdsIBdsgBAgFIdid2iAECAUZ20gF26AECAUR3uwN3zgMCAUF3ggN3iAMCAUB3uAV3wAUCAT930QR3rQUCAT133wN3wwQCATt3TXfoAQIBOXf/AXeYAgIBN3eYA3eqAwIBNXe7AnfBAgIBNHcpdzcCATJ4wgF4yAECATB4J3iJAQIBLnjSAXivAgIBLHnFAXnLAQIBKnkneYcBAgEoedUBebACAgEmepICeqQCAgEjen560AECASF6O3pUAgEfe8UBe8sBAgEdeyd7iAECARt71QF7sQICARl8mAF8qwECARZ8S3xRAgEVjgFojgFuAgEShgFmhgF4AgEN</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0hEOlxQcm9qZWN0c1xNQ1N5c3RlbXNcVEZTLU9ubGluZVxPbmlvbkFyY2hpdGVjdHVyZVxzY3JpcHRzXEdpdEJ1aWxkLnhhbWw9YgOKAQ4CAQFjBWOyAQIBR2QFiAEYAgECY0VjWgIBSGTwAWTMAgIBB2SCAWTjAQIBBWTdAmSLAwIBA2UHZcUBAgFDZgdmvAECAT9nB2fhAQIBO2gHhwESAgEJZaUBZaoBAgFGZTNlOAIBRWW9AWXCAQIBRGYmZjkCAUJmQWZVAgFBZocBZo0BAgFAZ8EBZ94BAgE9Z3VnewIBPGoLchYCAROCAQuFARYCAQ96D30aAgEKaw1rmQICATZsDWzDBQIBKW0NbeACAgElbg1u4QICASFvDW+nAgIBHHANcOICAgEYcQ1xrgECARSDAQ2DAXECARF7EXu1AQIBDHwRfIMBAgELa8IBa8gBAgE6aydriAECATlr0gFr6AECATdsuwNszgMCATRsggNsiAMCATNsuAVswAUCATJs0QRsrQUCATFs3wNswwQCATBsTWzoAQIBL2z/AWyYAgIBLWyYA2yqAwIBLGy7AmzBAgIBK2wpbDcCASptwgFtyAECAShtJ22JAQIBJ23SAW2vAgIBJm7FAW7LAQIBJG4nbocBAgEjbtUBbrACAgEib5ICb6QCAgEgb35v0AECAR9vO29UAgEdcMUBcMsBAgEbcCdwiAECARpw1QFwsQICARlxmAFxqwECARZxS3FRAgEVgwFogwFuAgESe2Z7eAIBDQ==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
