@@ -22,4 +22,5 @@ if ($buildNumber -match $pattern -ne $true) {
     }
 
     Write-Host "Done!"
+    
 }
