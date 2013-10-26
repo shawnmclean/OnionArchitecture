@@ -31,7 +31,7 @@ namespace OnionArchitecture.Infrastructure.Service
 
         public User GetUser(int userId)
         {
-            throw new NotImplementedException();
+            return userRepository.Find(u => u.UserId == userId);
         }
     }
 }
