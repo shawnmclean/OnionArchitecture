@@ -9,6 +9,8 @@ using System.Web.Routing;
 
 namespace OnionArchitecture.Web.Mvc
 {
+    using OnionArchitecture.Web.Mvc.CompositeRoot;
+
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
 
@@ -17,6 +19,8 @@ namespace OnionArchitecture.Web.Mvc
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+
+            DependencyConfiguration.Configure();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

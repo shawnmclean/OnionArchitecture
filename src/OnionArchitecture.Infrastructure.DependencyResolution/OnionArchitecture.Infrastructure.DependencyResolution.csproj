@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8E0DFF0C-65A3-4E8F-B1CB-E79D6EF14F7A}</ProjectGuid>
+    <ProjectGuid>{D3927E08-6CD4-459C-A202-BCA0DA7177ED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OnionArchitecture.Infrastructure.Repository</RootNamespace>
-    <AssemblyName>OnionArchitecture.Infrastructure.Repository</AssemblyName>
+    <RootNamespace>OnionArchitecture.Infrastructure.DependencyResolution</RootNamespace>
+    <AssemblyName>OnionArchitecture.Infrastructure.DependencyResolution</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
@@ -32,23 +32,45 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
-      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector">
+      <HintPath>..\..\packages\SimpleInjector.2.3.6\lib\net40-client\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web">
+      <HintPath>..\..\packages\SimpleInjector.Integration.Web.2.3.6\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc">
+      <HintPath>..\..\packages\SimpleInjector.Integration.Web.Mvc.2.3.6\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebActivator">
+      <HintPath>..\..\packages\WebActivator.1.4.4\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityFrameworkGenericRepository.cs" />
-    <Compile Include="EntityFramework\EntityDatabaseContext.cs" />
-    <Compile Include="EntityFramework\EntityFrameworkUnitOfWork.cs" />
+    <Compile Include="Initialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,9 +86,24 @@
       <Project>{6199c9ab-b521-4957-a7d6-c5edf6393738}</Project>
       <Name>OnionArchitecture.Core.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnionArchitecture.Core.Service\OnionArchitecture.Core.Service.csproj">
+      <Project>{88197713-b76c-4f67-a4b7-27e5e2dbb60f}</Project>
+      <Name>OnionArchitecture.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnionArchitecture.Infrastructure.Repository\OnionArchitecture.Infrastructure.Repository.csproj">
+      <Project>{8e0dff0c-65a3-4e8f-b1cb-e79d6ef14f7a}</Project>
+      <Name>OnionArchitecture.Infrastructure.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnionArchitecture.Infrastructure.Service\OnionArchitecture.Infrastructure.Service.csproj">
+      <Project>{eb38f4d1-7127-4320-b5ce-bf4112db4b41}</Project>
+      <Name>OnionArchitecture.Infrastructure.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnionArchitecture.Infrastructure\OnionArchitecture.Infrastructure.csproj">
+      <Project>{32af6ccb-db62-4fc1-876f-3b2727e15e8e}</Project>
+      <Name>OnionArchitecture.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -41,7 +41,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SimpleInjector">
+      <HintPath>..\..\packages\SimpleInjector.2.3.6\lib\net40-client\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web">
+      <HintPath>..\..\packages\SimpleInjector.Integration.Web.2.3.6\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc">
+      <HintPath>..\..\packages\SimpleInjector.Integration.Web.Mvc.2.3.6\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -116,6 +131,9 @@
       <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivator">
+      <HintPath>..\..\packages\WebActivator.1.4.4\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
     <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.Data.2.0.30506.0\lib\net40\WebMatrix.Data.dll</HintPath>
@@ -181,15 +199,22 @@
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\MappingConfiguration.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="CompositeRoot\DependencyConfiguration.cs" />
+    <Compile Include="CompositeRoot\SimpleInjectorWebApiDependencyResolver.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Users\BaseUserModel.cs" />
+    <Compile Include="Models\Users\UserCreateModel.cs" />
+    <Compile Include="Models\Users\UserDetailsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -303,12 +328,27 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Users\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnionArchitecture.Core.Domain\OnionArchitecture.Core.Domain.csproj">
+      <Project>{c0574d44-7027-45b7-b80e-bb04ae93466e}</Project>
+      <Name>OnionArchitecture.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnionArchitecture.Core.Service\OnionArchitecture.Core.Service.csproj">
+      <Project>{88197713-b76c-4f67-a4b7-27e5e2dbb60f}</Project>
+      <Name>OnionArchitecture.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnionArchitecture.Infrastructure.DependencyResolution\OnionArchitecture.Infrastructure.DependencyResolution.csproj">
+      <Project>{d3927e08-6cd4-459c-a202-bca0da7177ed}</Project>
+      <Name>OnionArchitecture.Infrastructure.DependencyResolution</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

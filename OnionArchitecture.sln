@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.20623.1 VSUPREVIEW
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{164F31FD-0294-4A4F-9AC9-BFFC3930D4BF}"
 EndProject
@@ -46,6 +46,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{3F8E
 		scripts\UpdateVersion.ps1 = scripts\UpdateVersion.ps1
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Infrastructure.DependencyResolution", "src\OnionArchitecture.Infrastructure.DependencyResolution\OnionArchitecture.Infrastructure.DependencyResolution.csproj", "{D3927E08-6CD4-459C-A202-BCA0DA7177ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,10 @@ Global
 		{133C99CE-1E17-4AE6-84C8-CCB77F326E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{133C99CE-1E17-4AE6-84C8-CCB77F326E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{133C99CE-1E17-4AE6-84C8-CCB77F326E8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3927E08-6CD4-459C-A202-BCA0DA7177ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3927E08-6CD4-459C-A202-BCA0DA7177ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3927E08-6CD4-459C-A202-BCA0DA7177ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3927E08-6CD4-459C-A202-BCA0DA7177ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +110,7 @@ Global
 		{32AF6CCB-DB62-4FC1-876F-3B2727E15E8E} = {9D8057E0-37B6-453D-9DC9-A7F3A11C01CD}
 		{8E0DFF0C-65A3-4E8F-B1CB-E79D6EF14F7A} = {9D8057E0-37B6-453D-9DC9-A7F3A11C01CD}
 		{EB38F4D1-7127-4320-B5CE-BF4112DB4B41} = {9D8057E0-37B6-453D-9DC9-A7F3A11C01CD}
+		{D3927E08-6CD4-459C-A202-BCA0DA7177ED} = {9D8057E0-37B6-453D-9DC9-A7F3A11C01CD}
 		{9FBED480-68EF-47CA-B11D-D56CF874F18D} = {B3ADAB4D-2649-48B3-BC89-E6DB86E5B21C}
 		{133C99CE-1E17-4AE6-84C8-CCB77F326E8F} = {B50F0BDF-90FE-42D4-9BCA-AE85585841F6}
 	EndGlobalSection
